@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Phone, Globe } from "lucide-react";
 
@@ -12,7 +11,7 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/b66f22e4-ffe9-468a-84c0-125dc599ac9f.png" 
                 alt="Save Ideas Digital Logo" 
-                className="h-12"
+                className="h-16 md:h-20"
               />
             </Link>
             <p className="text-gray-dark max-w-xs">
