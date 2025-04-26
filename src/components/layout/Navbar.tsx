@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -18,6 +19,7 @@ const Navbar = () => {
     { name: "Contact", href: "/contact" },
   ];
 
+  // Check if the current route matches the link
   const isActiveRoute = (href: string) => {
     if (href === "/" && location.pathname === "/") return true;
     if (href !== "/" && location.pathname.startsWith(href)) return true;
@@ -31,10 +33,11 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/b66f22e4-ffe9-468a-84c0-125dc599ac9f.png" 
             alt="Save Ideas Digital Logo" 
-            className="h-16 md:h-20 lg:h-24"
+            className="h-12 md:h-14"
           />
         </Link>
 
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <Link
@@ -54,6 +57,7 @@ const Navbar = () => {
           </Button>
         </nav>
 
+        {/* Mobile Menu Button */}
         <button 
           onClick={toggleMenu}
           className="md:hidden text-gray-dark p-2"
@@ -67,6 +71,7 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="container mx-auto px-4 py-4 space-y-4">
