@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,8 +62,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Save Ideas Digital custom colors
+                brand: {
+                    primary: '#1B6A60',    // Dark green from logo
+                    secondary: '#8FA7A4',  // Soft gray-green
+                    accent: '#8FDFCF',     // Light mint green from logo
+                    light: '#E6F7F4',      // Very light mint for backgrounds
+                    dark: '#0A3D37',       // Darker green for text
+                },
+                gray: {
+                    light: '#F1F1F1',     // Light gray for backgrounds
+                    DEFAULT: '#8E9196',   // Medium gray for text
+                    dark: '#4A4D52',      // Dark gray for emphasis
+                }
 			},
+			fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+            },
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
