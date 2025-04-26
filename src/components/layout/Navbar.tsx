@@ -31,7 +31,7 @@ const Navbar = () => {
   return <header className="sticky top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <img alt="Save Ideas Digital Logo" src="/lovable-uploads/3edd8dd3-d399-4350-b098-6e35fa187569.png" className="h-12 md:h-14 object-none" />
+          <img alt="Save Ideas Digital Logo" src="/lovable-uploads/a3dba606-1e45-47dc-b6b9-05ab3efe2cc8.png" className="h-12 md:h-14 object-fill" />
         </Link>
 
         {/* Desktop Navigation */}
