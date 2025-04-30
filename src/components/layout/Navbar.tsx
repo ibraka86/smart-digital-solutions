@@ -5,6 +5,8 @@ import { Menu, X, Home, User, FileText, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -63,41 +65,45 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Mobile Menu Button */}
-        <button 
-          onClick={toggleMenu} 
-          className="md:hidden text-gray-dark p-2" 
-          aria-label="Toggle Menu"
-        >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t">
-          <div className="container mx-auto px-4 py-4 space-y-4">
-            {navLinks.map(link => (
-              <Link 
-                key={link.name} 
-                to={link.href} 
-                className={`block py-2 text-base font-medium ${isActiveRoute(link.href) ? "text-brand-primary" : "text-gray-dark"}`} 
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Button asChild className="w-full bg-brand-primary hover:bg-brand-dark">
-              <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                Get Started
-              </Link>
+        {/* Mobile Menu Button - Use Sheet/Drawer for mobile */}
+        {isMobile ? (
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="md:hidden">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent className="w-[80%] sm:max-w-sm">
+              <div className="mt-8 flex flex-col gap-4">
+                {navLinks.map(link => (
+                  <Link 
+                    key={link.name} 
+                    to={link.href} 
+                    className={`flex items-center gap-2 py-2 text-base font-medium ${isActiveRoute(link.href) ? "text-brand-primary" : "text-gray-dark"}`}
+                  >
+                    <link.icon className="h-5 w-5" />
+                    {link.name}
+                  </Link>
+                ))}
+                <Button asChild className="w-full mt-4 bg-brand-primary hover:bg-brand-dark">
+                  <Link to="/contact">
+                    Get Started
+                  </Link>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        ) : (
+          <div className="hidden md:block">
+            <Button asChild className="bg-brand-primary hover:bg-brand-dark">
+              <Link to="/contact">Get Started</Link>
             </Button>
           </div>
-        </div>
-      )}
+        )}
+      </div>
       
       {/* Display the tubelight navbar in the center */}
-      <NavBar items={tubelightItems} />
+      {!isMobile && <NavBar items={tubelightItems} />}
     </header>
   );
 };

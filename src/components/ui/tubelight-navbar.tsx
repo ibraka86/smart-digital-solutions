@@ -20,6 +20,7 @@ interface NavBarProps {
 
 export function NavBar({ items, className }: NavBarProps) {
   const [activeTab, setActiveTab] = useState(items[0].name)
+  const [hoveredTab, setHoveredTab] = useState<string | null>(null)
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -32,6 +33,9 @@ export function NavBar({ items, className }: NavBarProps) {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
+  // Determine which tab to show the effect on (hover takes precedence over active)
+  const effectTab = hoveredTab || activeTab
+
   return (
     <div
       className={cn(
@@ -43,12 +47,15 @@ export function NavBar({ items, className }: NavBarProps) {
         {items.map((item) => {
           const Icon = item.icon
           const isActive = activeTab === item.name
+          const isEffect = effectTab === item.name
 
           return (
             <Link
               key={item.name}
               to={item.url}
               onClick={() => setActiveTab(item.name)}
+              onMouseEnter={() => setHoveredTab(item.name)}
+              onMouseLeave={() => setHoveredTab(null)}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-gray-dark hover:text-brand-primary",
@@ -59,7 +66,7 @@ export function NavBar({ items, className }: NavBarProps) {
               <span className="md:hidden">
                 <Icon size={18} strokeWidth={2.5} />
               </span>
-              {isActive && (
+              {isEffect && (
                 <motion.div
                   layoutId="lamp"
                   className="absolute inset-0 w-full bg-brand-primary/5 rounded-full -z-10"
