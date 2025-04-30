@@ -112,10 +112,16 @@ function SplashCursor({
         antialias: false,
         preserveDrawingBuffer: false,
       };
-      let gl = canvas.getContext("webgl2", params);
+      
+      // Try to get WebGL2 context first, then fallback to WebGL1
+      let gl: WebGLRenderingContext | WebGL2RenderingContext | null = canvas.getContext("webgl2", params) as WebGL2RenderingContext;
       const isWebGL2 = !!gl;
-      if (!isWebGL2)
-        gl = canvas.getContext("webgl", params) || canvas.getContext("experimental-webgl", params);
+      
+      // If WebGL2 isn't available, try WebGL1
+      if (!isWebGL2) {
+        gl = (canvas.getContext("webgl", params) || 
+              canvas.getContext("experimental-webgl", params)) as WebGLRenderingContext;
+      }
 
       if (!gl) throw new Error('WebGL not supported');
 
@@ -130,7 +136,9 @@ function SplashCursor({
           "OES_texture_half_float_linear"
         );
       }
+      
       gl.clearColor(0.0, 0.0, 0.0, 1.0);
+      
       const halfFloatTexType = isWebGL2
         ? (gl as WebGL2RenderingContext).HALF_FLOAT
         : halfFloat ? halfFloat.HALF_FLOAT_OES : (gl as WebGLRenderingContext).FLOAT;
@@ -150,14 +158,15 @@ function SplashCursor({
         formatRG = getSupportedFormat(gl, gl2.RG16F, gl2.RG, halfFloatTexType);
         formatR = getSupportedFormat(gl, gl2.R16F, gl.RED, halfFloatTexType);
       } else {
-        formatRGBA = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
+        const glWebGL1 = gl as WebGLRenderingContext;
+        formatRGBA = getSupportedFormat(gl, glWebGL1.RGBA, glWebGL1.RGBA, halfFloatTexType);
         // For WebGL 1, use RGBA format instead of RG since RG is not available
-        formatRG = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
-        formatR = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
+        formatRG = getSupportedFormat(gl, glWebGL1.RGBA, glWebGL1.RGBA, halfFloatTexType);
+        formatR = getSupportedFormat(gl, glWebGL1.RGBA, glWebGL1.RGBA, halfFloatTexType);
       }
 
       return {
-        gl: gl as WebGLRenderingContext | WebGL2RenderingContext,
+        gl,
         ext: {
           formatRGBA,
           formatRG,
