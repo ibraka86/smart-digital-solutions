@@ -4,6 +4,7 @@ import { ArrowRight, Check, Search, LayoutDashboard, Code, Database } from "luci
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { SplashCursor } from "@/components/ui/splash-cursor";
 
 const Index = () => {
   const services = [
@@ -76,14 +77,23 @@ const Index = () => {
 
   return (
     <>
+      <SplashCursor 
+        SIM_RESOLUTION={128}
+        DYE_RESOLUTION={1024}
+        DENSITY_DISSIPATION={3}
+        VELOCITY_DISSIPATION={1.8}
+        PRESSURE={0.12}
+        CURL={2}
+        SPLAT_RADIUS={0.25}
+        COLOR_UPDATE_SPEED={8}
+        BACK_COLOR={{ r: 0, g: 0.32, b: 0.28 }}
+        TRANSPARENT={true}
+      />
+      
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-brand-light to-white overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10">
-          <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-brand-accent/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-brand-accent/20 to-transparent" />
-        </div>
+      <section className="relative bg-gradient-to-br from-brand-light to-white overflow-hidden min-h-[90vh] flex items-center">
         <div className="container relative z-10 mx-auto px-4 py-20 md:py-28 lg:py-32">
           <div className="max-w-3xl mx-auto md:mx-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-6 tracking-tight">
@@ -112,7 +122,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-white relative">
         <div className="container mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
