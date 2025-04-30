@@ -1,9 +1,9 @@
+
 import { Link } from "react-router-dom";
 import { ArrowRight, Check, Search, LayoutDashboard, Code, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { SplashCursor } from "@/components/ui/splash-cursor";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 
 const Index = () => {
@@ -77,19 +77,6 @@ const Index = () => {
 
   return (
     <>
-      <SplashCursor 
-        SIM_RESOLUTION={128}
-        DYE_RESOLUTION={1024}
-        DENSITY_DISSIPATION={3}
-        VELOCITY_DISSIPATION={1.8}
-        PRESSURE={0.12}
-        CURL={2}
-        SPLAT_RADIUS={0.25}
-        COLOR_UPDATE_SPEED={8}
-        BACK_COLOR={{ r: 0, g: 0.32, b: 0.28 }}
-        TRANSPARENT={true}
-      />
-      
       <Navbar />
       
       {/* Hero Section */}
