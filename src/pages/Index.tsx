@@ -24,10 +24,10 @@ const Index = () => {
     description: "Tailored software solutions that streamline operations and scale your business."
   }];
   const whyChooseUs = [{
-    title: "5+ Years SEO and Google Ads Experience",
+    title: "8+ Years SEO and Google Ads Experience",
     description: "We've helped businesses across multiple industries achieve sustainable growth."
   }, {
-    title: "7+ Years Web Development Mastery",
+    title: "10+ Years Web Development Mastery",
     description: "Our team builds beautiful, functional websites that drive real results."
   }, {
     title: "Experts in Custom Automation",
