@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="space-y-4">
             <Link to="/" className="inline-block">
               <img 
-                src="/lovable-uploads/b66f22e4-ffe9-468a-84c0-125dc599ac9f.png" 
+                src="/lovable-uploads/17100480-ffd8-4fe2-8482-4baeb50fdefa.png" 
                 alt="Save Ideas Digital Logo" 
-                className="h-12"
+                className="h-14"
               />
             </Link>
             <p className="text-gray-dark max-w-xs">
