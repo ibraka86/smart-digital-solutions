@@ -1,10 +1,10 @@
-
 import { Link } from "react-router-dom";
 import { ArrowRight, Check, Search, LayoutDashboard, Code, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { SplashCursor } from "@/components/ui/splash-cursor";
+import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 
 const Index = () => {
   const services = [
@@ -93,33 +93,11 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-brand-light to-white overflow-hidden min-h-[90vh] flex items-center">
-        <div className="container relative z-10 mx-auto px-4 py-20 md:py-28 lg:py-32">
-          <div className="max-w-3xl mx-auto md:mx-0">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-6 tracking-tight">
-              Grow Faster With Smart Digital Solutions
-            </h1>
-            <h2 className="text-xl md:text-2xl text-gray mb-8">
-              SEO | Google Ads | Websites | Software | Automation
-            </h2>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                asChild
-                className="bg-brand-primary hover:bg-brand-dark text-white px-8 py-6 text-lg"
-              >
-                <Link to="/contact">Get Started</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="border-brand-primary text-brand-primary hover:bg-brand-light px-8 py-6 text-lg"
-              >
-                <Link to="/services">Explore Services</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroGeometric 
+        badge="Save Ideas Digital"
+        title1="Grow Faster With"
+        title2="Smart Digital Solutions"
+      />
 
       {/* Services Section */}
       <section className="section-padding bg-white relative">
