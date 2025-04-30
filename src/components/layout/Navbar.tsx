@@ -63,17 +63,6 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop Navigation - we'll hide the regular nav and use the tubelight nav */}
-        <div className="hidden md:flex items-center">
-          <NavBar 
-            items={tubelightItems} 
-            className="static transform-none mb-0 pt-0 mr-4"
-          />
-          <Button asChild className="bg-brand-primary hover:bg-brand-dark ml-2">
-            <Link to="/contact">Get Started</Link>
-          </Button>
-        </div>
-
         {/* Mobile Menu Button */}
         <button 
           onClick={toggleMenu} 
@@ -107,10 +96,8 @@ const Navbar = () => {
         </div>
       )}
       
-      {/* Display the tubelight navbar at the bottom on mobile */}
-      {isMobile && !mobileMenuOpen && (
-        <NavBar items={tubelightItems} />
-      )}
+      {/* Display the tubelight navbar in the center */}
+      <NavBar items={tubelightItems} />
     </header>
   );
 };
