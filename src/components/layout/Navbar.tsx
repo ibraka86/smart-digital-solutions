@@ -1,12 +1,15 @@
 
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, User, FileText, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { NavBar } from "@/components/ui/tubelight-navbar";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const isMobile = useIsMobile();
 
   const toggleMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -15,19 +18,23 @@ const Navbar = () => {
   const navLinks = [
     {
       name: "Home",
-      href: "/"
+      href: "/",
+      icon: Home
     }, 
     {
       name: "Services",
-      href: "/services"
+      href: "/services",
+      icon: Briefcase
     }, 
     {
       name: "About",
-      href: "/about"
+      href: "/about",
+      icon: User
     }, 
     {
       name: "Contact",
-      href: "/contact"
+      href: "/contact",
+      icon: FileText
     }
   ];
 
@@ -37,6 +44,13 @@ const Navbar = () => {
     if (href !== "/" && location.pathname.startsWith(href)) return true;
     return false;
   };
+
+  // Format navLinks for the tubelight navbar
+  const tubelightItems = navLinks.map(link => ({
+    name: link.name,
+    url: link.href,
+    icon: link.icon
+  }));
 
   return (
     <header className="sticky top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
@@ -49,21 +63,16 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
-          {navLinks.map(link => (
-            <Link 
-              key={link.name} 
-              to={link.href} 
-              className={`text-base font-medium transition-colors hover:text-brand-primary ${isActiveRoute(link.href) ? "text-brand-primary" : "text-gray-dark"}`}
-            >
-              {link.name}
-            </Link>
-          ))}
-          <Button asChild className="bg-brand-primary hover:bg-brand-dark">
+        {/* Desktop Navigation - we'll hide the regular nav and use the tubelight nav */}
+        <div className="hidden md:flex items-center">
+          <NavBar 
+            items={tubelightItems} 
+            className="static transform-none mb-0 pt-0 mr-4"
+          />
+          <Button asChild className="bg-brand-primary hover:bg-brand-dark ml-2">
             <Link to="/contact">Get Started</Link>
           </Button>
-        </nav>
+        </div>
 
         {/* Mobile Menu Button */}
         <button 
@@ -96,6 +105,11 @@ const Navbar = () => {
             </Button>
           </div>
         </div>
+      )}
+      
+      {/* Display the tubelight navbar at the bottom on mobile */}
+      {isMobile && !mobileMenuOpen && (
+        <NavBar items={tubelightItems} />
       )}
     </header>
   );
