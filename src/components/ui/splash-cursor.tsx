@@ -1,3 +1,4 @@
+
 "use client";
 import { useEffect, useRef } from "react";
 
@@ -156,7 +157,8 @@ function SplashCursor({
           halfFloatTexType
         );
         formatRG = getSupportedFormat(gl, gl2.RG16F, gl2.RG, halfFloatTexType);
-        formatR = getSupportedFormat(gl, gl2.R16F, gl.RED, halfFloatTexType);
+        // Fix the error by using the correct constant for WebGL2 context
+        formatR = getSupportedFormat(gl, gl2.R16F, gl2.RED, halfFloatTexType);
       } else {
         const glWebGL1 = gl as WebGLRenderingContext;
         formatRGBA = getSupportedFormat(gl, glWebGL1.RGBA, glWebGL1.RGBA, halfFloatTexType);
