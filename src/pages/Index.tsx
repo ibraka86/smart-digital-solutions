@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Search, LayoutDashboard, Code, Database } from "lucide-react";
+import { ArrowRight, Check, Search, LayoutDashboard, Code, Database, Blocks } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 import { motion } from "framer-motion";
+
 const Index = () => {
   const services = [{
     icon: <Search className="h-10 w-10 text-brand-primary" />,
@@ -22,7 +23,12 @@ const Index = () => {
     icon: <Database className="h-10 w-10 text-brand-primary" />,
     title: "Custom Software & Automation",
     description: "Tailored software solutions that streamline operations and scale your business."
+  }, {
+    icon: <Blocks className="h-10 w-10 text-brand-primary" />,
+    title: "Blockchain Data Storage",
+    description: "Secure, decentralized data storage solutions with enhanced security and transparency."
   }];
+
   const whyChooseUs = [{
     title: "8+ Years SEO and Google Ads Experience",
     description: "We've helped businesses across multiple industries achieve sustainable growth."
@@ -117,7 +123,7 @@ const Index = () => {
           <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{
           once: true,
           margin: "-100px"
-        }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             {services.map((service, index) => <motion.div key={index} variants={itemVariants} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-2" style={{
             perspective: "1000px"
           }}>
