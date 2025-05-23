@@ -3,7 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Search, LayoutDashboard, Code, Database, ArrowRight, Check } from "lucide-react";
+import { Search, LayoutDashboard, Code, Database, ArrowRight, Check, Blocks } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -61,6 +61,20 @@ const Services = () => {
         "Integration with existing systems",
         "Data management solutions",
         "Workflow optimization tools",
+      ],
+    },
+    {
+      id: "blockchain",
+      icon: <Blocks className="h-12 w-12 text-brand-primary" />,
+      title: "Blockchain Data Storage",
+      description:
+        "Secure, transparent, and decentralized data storage solutions using blockchain technology. We implement cutting-edge blockchain systems that ensure data integrity, enhance security, and provide immutable record-keeping for your business.",
+      features: [
+        "Decentralized storage architecture",
+        "Immutable data records & timestamping",
+        "Smart contract implementation",
+        "Enhanced data security & integrity",
+        "Transparent audit trails & compliance",
       ],
     },
   ];
