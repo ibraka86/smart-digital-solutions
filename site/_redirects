@@ -1,0 +1,4 @@
+# Keep the old React-router URLs working
+/services   /services.html   200
+/about      /about.html      200
+/contact    /contact.html    200
