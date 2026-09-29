@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Contact | Save Ideas Digital</title>
+    <meta name="description" content="Reach out to Save Ideas Digital to discuss how we can help your business grow with our digital solutions.">
+    <meta name="author" content="Save Ideas Digital">
+    <link rel="icon" href="images/og-image.png" type="image/png">
+
+    <meta property="og:title" content="Contact | Save Ideas Digital">
+    <meta property="og:description" content="Full-service digital solutions company helping businesses grow faster with SEO, Google Ads, websites and custom software.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@saveideasdigital">
+    <meta name="twitter:image" content="/images/og-image.png">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bold-redesign.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body class="bg-white">
+    <!-- Header -->
+    <header class="main-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">
+                <img src="images/saveideasdigital.png" alt="Save Ideas Digital Logo">
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item" data-page="index">
+                    <span>Home</span>
+                </a>
+
+                <!-- Services Dropdown -->
+                <div class="dropdown">
+                    <div class="nav-item" style="cursor:pointer" data-page="services" tabindex="0">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="services.html#seo" class="dropdown-item">
+                            <span>SEO</span>
+                        </a>
+                        <a href="services.html#google-ads" class="dropdown-item">
+                            <span>Google Ads</span>
+                        </a>
+                        <a href="services.html#websites" class="dropdown-item">
+                            <span>Website Development</span>
+                        </a>
+                        <a href="services.html#software" class="dropdown-item">
+                            <span>Software &amp; Automation</span>
+                        </a>
+                        <a href="services.html#blockchain" class="dropdown-item">
+                            <span>Blockchain Data Storage</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item" data-page="about">
+                    <span>About Us</span>
+                </a>
+                <a href="contact.html" class="nav-item nav-item-btn">
+                    <span>Contact</span>
+                </a>
+            </nav>
+
+            <button class="mobile-menu-btn touch-target" onclick="toggleMobileMenu()" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav">
+        <div class="mobile-nav-content">
+            <button class="close-mobile-menu touch-target" onclick="toggleMobileMenu()" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="nav-logo mb-8">
+                <img src="images/saveideasdigital.png" alt="Save Ideas Digital Logo">
+            </div>
+
+            <nav class="mobile-nav-menu">
+                <a href="index.html" class="mobile-nav-item touch-target" data-page="index">
+                    <span>Home</span>
+                </a>
+
+                <!-- Services Mobile Dropdown -->
+                <div class="mobile-dropdown">
+                    <div class="mobile-nav-item touch-target" onclick="toggleMobileDropdown(this)" data-page="services">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                    <div class="mobile-dropdown-menu">
+                        <a href="services.html#seo" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>SEO</span>
+                        </a>
+                        <a href="services.html#google-ads" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Google Ads</span>
+                        </a>
+                        <a href="services.html#websites" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Website Development</span>
+                        </a>
+                        <a href="services.html#software" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Software &amp; Automation</span>
+                        </a>
+                        <a href="services.html#blockchain" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Blockchain Data Storage</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="mobile-nav-item touch-target" data-page="about">
+                    <span>About Us</span>
+                </a>
+                <a href="contact.html" class="mobile-nav-item touch-target" data-page="contact">
+                    <span>Contact</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero section-gradient-light">
+        <div class="container mx-auto px-4">
+            <div class="hero-badge">
+                <div class="pulse-dot"></div>
+                <span>Contact</span>
+            </div>
+            <h1>
+                <span class="underline-accent">
+                    Let's Start Your <span class="text-gradient">Project</span>
+                </span>
+            </h1>
+            <p class="text-gradient-subtle">Reach out to discuss how we can help your business grow with our digital
+                solutions.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding section-gradient-soft">
+        <div class="container mx-auto">
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Contact Form -->
+                <div class="animate-on-scroll">
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <p class="text-gray-600 mb-6" style="margin-top:-16px">Fill out the form below and we'll get back
+                            to you as soon as possible.</p>
+
+                        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6" data-web3forms>
+                            <!-- Web3Forms Hidden Inputs -->
+                            <input type="hidden" name="access_key" value="2c6f7097-4e53-4381-a019-8ae4725c9aaf">
+                            <input type="hidden" name="subject" value="Save Ideas Digital (.com) - Contact">
+                            <input type="hidden" name="from_name" value="Save Ideas Digital">
+                            <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+                            <!-- Name & Email -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name-contact">Name *</label>
+                                    <input id="name-contact" type="text" name="name" class="contact-input"
+                                        placeholder="Your name" required />
+                                </div>
+                                <div>
+                                    <label for="email-contact">Email *</label>
+                                    <input id="email-contact" type="email" name="email" class="contact-input"
+                                        placeholder="your.email@example.com" required />
+                                </div>
+                            </div>
+
+                            <!-- Company -->
+                            <div>
+                                <label for="company-contact">Company Name (optional)</label>
+                                <input id="company-contact" type="text" name="company" class="contact-input"
+                                    placeholder="Your company" />
+                            </div>
+
+                            <!-- Service -->
+                            <div>
+                                <label for="service-contact">Service Interested In</label>
+                                <select id="service-contact" name="service" class="contact-input">
+                                    <option>SEO Optimization</option>
+                                    <option>Google Ads Management</option>
+                                    <option>Website Development</option>
+                                    <option>Custom Software &amp; Automation</option>
+                                    <option>Blockchain Data Storage</option>
+                                    <option>All Services</option>
+                                </select>
+                            </div>
+
+                            <!-- Message -->
+                            <div>
+                                <label for="message-contact">Message *</label>
+                                <textarea id="message-contact" name="message" class="contact-input" rows="4"
+                                    placeholder="Tell us about your project..." required></textarea>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" class="contact-btn touch-target">Send Message</button>
+                            <p class="form-status" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="space-y-6">
+                        <div class="contact-info-item">
+                            <div class="contact-icon-box">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:info@saveideasdigital.com">info@saveideasdigital.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon-box">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <a href="tel:+61435877989">(+61) 435 877 989</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon-box">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Website</h4>
+                                <a href="https://saveideasdigital.com">saveideasdigital.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-form"
+                            style="box-shadow: 6px 6px 0 var(--green-primary); padding: 32px !important;">
+                            <h4 class="font-bold text-black mb-4 uppercase tracking-wider">Business Hours</h4>
+                            <div class="text-gray-600">
+                                <div class="hours-row"><span>Monday - Friday</span><span>9:00 AM - 6:00 PM</span></div>
+                                <div class="hours-row"><span>Saturday - Sunday</span><span>Closed</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer-brutalist">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <a href="index.html" class="footer-logo inline-block">
+                        <img src="images/saveideasdigital.png" alt="Save Ideas Digital Logo">
+                    </a>
+                    <p class="footer-text">Full-service digital solutions company specializing in SEO, Google Ads,
+                        website development, software creation, and automation systems.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#seo">SEO Optimization</a></li>
+                        <li><a href="services.html#google-ads">Google Ads Management</a></li>
+                        <li><a href="services.html#websites">Website Development</a></li>
+                        <li><a href="services.html#software">Custom Software &amp; Automation</a></li>
+                        <li><a href="services.html#blockchain">Blockchain Data Storage</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@saveideasdigital.com">info@saveideasdigital.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+61435877989">(+61) 435 877 989</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <a href="https://saveideasdigital.com">saveideasdigital.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span data-year>2025</span> Save Ideas Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script
+      src="https://preview--trust-boost-widgets.lovable.app/widget.js"
+      data-site-id="14623d0e-f2e2-466c-b0d6-7238b354b3c2"
+      data-color="#10B981"
+      data-greeting="Hello! 👋 How can I help you today?"
+      data-theme="light"
+      data-size="medium"
+      data-logo-url="https://blog.thebreadmap.com/wp-content/smush-webp/2025/06/ChatGPT-Image-Jun-2-2025-03_54_25-PM-800x800.png.webp"
+      data-bot-name="AI Assistant"
+      data-quick-replies-count="4"
+      data-quick-reply-1="🔨 I need help building something"
+      data-quick-reply-1-mode="chatbot"
+      data-quick-reply-2="🤔 I have questions"
+      data-quick-reply-2-mode="chatbot"
+      data-quick-reply-3="📖 Tell me about your services"
+      data-quick-reply-3-mode="chatbot"
+      data-quick-reply-4="👋 Just browsing"
+      data-quick-reply-4-mode="chatbot"
+      data-enable-homepage="true"
+      data-home-title="How can we help you today?"
+      data-home-subtitle="Let me know if you have any questions!"
+      data-home-tab-text="Save Ideas"
+      data-chat-tab-text="Contact"
+      data-home-link1-text="⚡ Start free trial"
+      data-home-link1-url="https://save-ideas.com/"
+      defer
+    ></script>
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>About Us | Save Ideas Digital</title>
+    <meta name="description" content="Save Ideas Digital combines technical expertise with creative strategies to help businesses thrive.">
+    <meta name="author" content="Save Ideas Digital">
+    <link rel="icon" href="images/og-image.png" type="image/png">
+
+    <meta property="og:title" content="About Us | Save Ideas Digital">
+    <meta property="og:description" content="Full-service digital solutions company helping businesses grow faster with SEO, Google Ads, websites and custom software.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@saveideasdigital">
+    <meta name="twitter:image" content="/images/og-image.png">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bold-redesign.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body class="bg-white">
+    <!-- Header -->
+    <header class="main-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">
+                <img src="images/saveideasdigital.png" alt="Save Ideas Digital Logo">
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item" data-page="index">
+                    <span>Home</span>
+                </a>
+
+                <!-- Services Dropdown -->
+                <div class="dropdown">
+                    <div class="nav-item" style="cursor:pointer" data-page="services" tabindex="0">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="services.html#seo" class="dropdown-item">
+                            <span>SEO</span>
+                        </a>
+                        <a href="services.html#google-ads" class="dropdown-item">
+                            <span>Google Ads</span>
+                        </a>
+                        <a href="services.html#websites" class="dropdown-item">
+                            <span>Website Development</span>
+                        </a>
+                        <a href="services.html#software" class="dropdown-item">
+                            <span>Software &amp; Automation</span>
+                        </a>
+                        <a href="services.html#blockchain" class="dropdown-item">
+                            <span>Blockchain Data Storage</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item" data-page="about">
+                    <span>About Us</span>
+                </a>
+                <a href="contact.html" class="nav-item nav-item-btn">
+                    <span>Contact</span>
+                </a>
+            </nav>
+
+            <button class="mobile-menu-btn touch-target" onclick="toggleMobileMenu()" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav">
+        <div class="mobile-nav-content">
+            <button class="close-mobile-menu touch-target" onclick="toggleMobileMenu()" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="nav-logo mb-8">
+                <img src="images/saveideasdigital.png" alt="Save Ideas Digital Logo">
+            </div>
+
+            <nav class="mobile-nav-menu">
+                <a href="index.html" class="mobile-nav-item touch-target" data-page="index">
+                    <span>Home</span>
+                </a>
+
+                <!-- Services Mobile Dropdown -->
+                <div class="mobile-dropdown">
+                    <div class="mobile-nav-item touch-target" onclick="toggleMobileDropdown(this)" data-page="services">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                    <div class="mobile-dropdown-menu">
+                        <a href="services.html#seo" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>SEO</span>
+                        </a>
+                        <a href="services.html#google-ads" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Google Ads</span>
+                        </a>
+                        <a href="services.html#websites" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Website Development</span>
+                        </a>
+                        <a href="services.html#software" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Software &amp; Automation</span>
+                        </a>
+                        <a href="services.html#blockchain" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Blockchain Data Storage</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="mobile-nav-item touch-target" data-page="about">
+                    <span>About Us</span>
+                </a>
+                <a href="contact.html" class="mobile-nav-item touch-target" data-page="contact">
+                    <span>Contact</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero section-gradient-light">
+        <div class="container mx-auto px-4">
+            <div class="hero-badge">
+                <div class="pulse-dot"></div>
+                <span>About Us</span>
+            </div>
+            <h1>
+                <span class="underline-accent">
+                    About Save Ideas <span class="text-gradient">Digital</span>
+                </span>
+            </h1>
+            <p class="text-gradient-subtle">Combining technical expertise with creative strategies to help businesses
+                thrive.</p>
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section class="section-padding">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-on-scroll">
+                    <h2>
+                        <span class="underline-accent">
+                            Who <span class="text-gradient">We Are</span>
+                        </span>
+                    </h2>
+                    <p class="text-lg text-gray-800 font-medium mt-8 mb-4">Save Ideas Digital was founded by a senior SEO
+                        and developer with over 5 years experience in digital marketing and 7 years experience building
+                        websites and software.</p>
+                    <p class="text-gray-600 mb-4">We believe in combining smart ideas with powerful technology to create
+                        real business growth. Our approach integrates strategic marketing with technical excellence to
+                        deliver solutions that drive meaningful results.</p>
+                    <p class="text-gray-600">As a full-service digital agency, we bridge the gap between marketing and
+                        development, ensuring all aspects of your digital presence work together seamlessly toward your
+                        business goals.</p>
+                </div>
+
+                <div class="hero-visual animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="shape-container">
+                        <div class="floating-shape shape-1"></div>
+                        <div class="floating-shape shape-2"></div>
+                        <div class="floating-shape shape-3"></div>
+                        <div class="floating-shape shape-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="section-padding section-gradient-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+                <h2>
+                    <span class="underline-accent">
+                        Our <span class="text-gradient">Mission</span>
+                    </span>
+                </h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto testimonial-card animate-on-scroll">
+                <div class="testimonial-quote">"</div>
+                <p class="testimonial-text">Empower businesses with smart, reliable, and scalable digital solutions.</p>
+                <p class="text-gray-600" style="font-size:1.0625rem; line-height:1.8;">Our founder started Save Ideas
+                    Digital after seeing too many businesses struggle with disconnected services. Our mission is to
+                    provide one complete, strategic digital solution that addresses all aspects of your online presence.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="section-padding">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+                <h2>
+                    <span class="underline-accent">
+                        Our <span class="text-gradient">Values</span>
+                    </span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="why-choose-card animate-on-scroll">
+                    <div class="why-choose-number">01</div>
+                    <h3>Innovation</h3>
+                    <p>We constantly explore new technologies and strategies to keep our clients ahead of the competition.</p>
+                </div>
+                <div class="why-choose-card animate-on-scroll" style="animation-delay: 0.1s;">
+                    <div class="why-choose-number">02</div>
+                    <h3>Transparency</h3>
+                    <p>We believe in clear communication and keeping our clients informed throughout every project.</p>
+                </div>
+                <div class="why-choose-card animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="why-choose-number">03</div>
+                    <h3>Excellence</h3>
+                    <p>We're committed to delivering high-quality work that exceeds expectations and drives real results.</p>
+                </div>
+                <div class="why-choose-card animate-on-scroll" style="animation-delay: 0.3s;">
+                    <div class="why-choose-number">04</div>
+                    <h3>Growth</h3>
+                    <p>We're passionate about helping our clients grow and succeed in the digital landscape.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding cta-section">
+        <div class="container mx-auto px-4">
+            <div class="cta-container">
+                <div class="cta-badge">
+                    <div class="pulse-dot"></div>
+                    <span>Let's Work Together</span>
+                </div>
+
+                <h2 class="cta-title">
+                    <span class="underline-accent">
+                        Ready to Work <span class="text-gradient">With Us?</span>
+                    </span>
+                </h2>
+
+                <p class="cta-description text-gradient-subtle">
+                    Partner with Save Ideas Digital to transform your digital presence and achieve sustainable growth.
+                </p>
+
+                <a href="contact.html" class="btn-primary btn-large">
+                    <span>Start Your Project</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-brutalist">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <a href="index.html" class="footer-logo inline-block">
+                        <img src="images/saveideasdigital.png" alt="Save Ideas Digital Logo">
+                    </a>
+                    <p class="footer-text">Full-service digital solutions company specializing in SEO, Google Ads,
+                        website development, software creation, and automation systems.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#seo">SEO Optimization</a></li>
+                        <li><a href="services.html#google-ads">Google Ads Management</a></li>
+                        <li><a href="services.html#websites">Website Development</a></li>
+                        <li><a href="services.html#software">Custom Software &amp; Automation</a></li>
+                        <li><a href="services.html#blockchain">Blockchain Data Storage</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@saveideasdigital.com">info@saveideasdigital.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+61435877989">(+61) 435 877 989</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <a href="https://saveideasdigital.com">saveideasdigital.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span data-year>2025</span> Save Ideas Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script
+      src="https://preview--trust-boost-widgets.lovable.app/widget.js"
+      data-site-id="14623d0e-f2e2-466c-b0d6-7238b354b3c2"
+      data-color="#10B981"
+      data-greeting="Hello! 👋 How can I help you today?"
+      data-theme="light"
+      data-size="medium"
+      data-logo-url="https://blog.thebreadmap.com/wp-content/smush-webp/2025/06/ChatGPT-Image-Jun-2-2025-03_54_25-PM-800x800.png.webp"
+      data-bot-name="AI Assistant"
+      data-quick-replies-count="4"
+      data-quick-reply-1="🔨 I need help building something"
+      data-quick-reply-1-mode="chatbot"
+      data-quick-reply-2="🤔 I have questions"
+      data-quick-reply-2-mode="chatbot"
+      data-quick-reply-3="📖 Tell me about your services"
+      data-quick-reply-3-mode="chatbot"
+      data-quick-reply-4="👋 Just browsing"
+      data-quick-reply-4-mode="chatbot"
+      data-enable-homepage="true"
+      data-home-title="How can we help you today?"
+      data-home-subtitle="Let me know if you have any questions!"
+      data-home-tab-text="Save Ideas"
+      data-chat-tab-text="Contact"
+      data-home-link1-text="⚡ Start free trial"
+      data-home-link1-url="https://save-ideas.com/"
+      defer
+    ></script>
+</body>
+
+</html>

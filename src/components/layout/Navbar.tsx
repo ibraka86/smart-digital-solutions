@@ -5,7 +5,7 @@ import { Menu, X, Home, User, FileText, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
 
 const Navbar = () => {
@@ -76,20 +76,23 @@ const Navbar = () => {
             <SheetContent className="w-[80%] sm:max-w-sm">
               <div className="mt-8 flex flex-col gap-4">
                 {navLinks.map(link => (
-                  <Link 
-                    key={link.name} 
-                    to={link.href} 
-                    className={`flex items-center gap-2 py-2 text-base font-medium ${isActiveRoute(link.href) ? "text-brand-primary" : "text-gray-dark"}`}
-                  >
-                    <link.icon className="h-5 w-5" />
-                    {link.name}
-                  </Link>
+                  <SheetClose asChild key={link.name}>
+                    <Link 
+                      to={link.href} 
+                      className={`flex items-center gap-2 py-2 text-base font-medium ${isActiveRoute(link.href) ? "text-brand-primary" : "text-gray-dark"}`}
+                    >
+                      <link.icon className="h-5 w-5" />
+                      {link.name}
+                    </Link>
+                  </SheetClose>
                 ))}
-                <Button asChild className="w-full mt-4 bg-brand-primary hover:bg-brand-dark">
-                  <Link to="/contact">
-                    Get Started
-                  </Link>
-                </Button>
+                <SheetClose asChild>
+                  <Button asChild className="w-full mt-4 bg-brand-primary hover:bg-brand-dark">
+                    <Link to="/contact">
+                      Get Started
+                    </Link>
+                  </Button>
+                </SheetClose>
               </div>
             </SheetContent>
           </Sheet>

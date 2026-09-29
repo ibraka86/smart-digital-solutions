@@ -2,10 +2,20 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { Search, LayoutDashboard, Code, Database, ArrowRight, Check, Blocks } from "lucide-react";
 
 const Services = () => {
+  const { hash } = useLocation();
+
+  // Scroll to the service named in the URL hash (e.g. /services#seo)
+  useEffect(() => {
+    if (!hash) return;
+    const el = document.getElementById(hash.slice(1));
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [hash]);
+
   const services = [
     {
       id: "seo",

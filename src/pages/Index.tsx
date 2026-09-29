@@ -9,22 +9,27 @@ import { motion } from "framer-motion";
 const Index = () => {
   const services = [{
     icon: <Search className="h-10 w-10 text-brand-primary" />,
+    id: "seo",
     title: "SEO Optimization",
     description: "Boost your organic traffic and rankings with our data-driven SEO strategies."
   }, {
     icon: <LayoutDashboard className="h-10 w-10 text-brand-primary" />,
+    id: "google-ads",
     title: "Google Ads Management",
     description: "Maximize ROI with targeted campaigns managed by certified experts."
   }, {
     icon: <Code className="h-10 w-10 text-brand-primary" />,
+    id: "websites",
     title: "Website Design & Development",
     description: "Custom, mobile-responsive websites designed to convert visitors into customers."
   }, {
     icon: <Database className="h-10 w-10 text-brand-primary" />,
+    id: "software",
     title: "Custom Software & Automation",
     description: "Tailored software solutions that streamline operations and scale your business."
   }, {
     icon: <Blocks className="h-10 w-10 text-brand-primary" />,
+    id: "blockchain",
     title: "Blockchain Data Storage",
     description: "Secure, decentralized data storage solutions with enhanced security and transparency."
   }];
@@ -144,7 +149,7 @@ const Index = () => {
                     {service.title}
                   </h3>
                   <p className="text-gray-dark mb-4">{service.description}</p>
-                  <Link to={`/services`} className="inline-flex items-center text-brand-primary font-medium group-hover:underline">
+                  <Link to={`/services#${service.id}`} className="inline-flex items-center text-brand-primary font-medium group-hover:underline">
                     Learn more <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </motion.div>
@@ -381,7 +386,7 @@ const Index = () => {
               }} transition={{
                 duration: 0.5,
                 delay: 0.8
-              }} className="text-brand-dark font-medium">Dejan Vuković - CEO of VP Law Firm</motion.p>
+              }} className="text-brand-dark font-medium">Vladimir Savić - CEO of VP Law Firm</motion.p>
               </div>
             </div>
           </motion.div>

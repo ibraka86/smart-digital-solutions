@@ -71,3 +71,9 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Static HTML/CSS/JS version (`site/`)
+
+A dependency-free redesign of the site lives in `site/` (cream-paper "storybook" style):
+`index.html`, `services.html`, `about.html`, `contact.html`, `404.html`, `css/styles.css`, `js/main.js`.
+Open `site/index.html` in a browser, or deploy by setting the Netlify publish directory to `site` (no build command).
