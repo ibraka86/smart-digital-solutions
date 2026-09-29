@@ -79,9 +79,8 @@ const Index = () => {
       y: 0,
       opacity: 1,
       transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10
+        duration: 0.5,
+        ease: "easeOut"
       }
     }
   };
@@ -129,18 +128,8 @@ const Index = () => {
           once: true,
           margin: "-100px"
         }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {services.map((service, index) => <motion.div key={index} variants={itemVariants} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-2" style={{
-            perspective: "1000px"
-          }}>
-                <motion.div whileHover={{
-              rotateY: 15,
-              rotateX: 15,
-              scale: 1.05
-            }} transition={{
-              type: "spring",
-              stiffness: 300,
-              damping: 10
-            }} className="relative">
+            {services.map((service, index) => <motion.div key={index} variants={itemVariants} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 group">
+                <div className="relative">
                   <div className="mb-4 bg-brand-light rounded-full p-4 inline-block">
                     {service.icon}
                   </div>
@@ -152,7 +141,7 @@ const Index = () => {
                   <Link to={`/services#${service.id}`} className="inline-flex items-center text-brand-primary font-medium group-hover:underline">
                     Learn more <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
-                </motion.div>
+                </div>
               </motion.div>)}
           </motion.div>
 
@@ -221,16 +210,9 @@ const Index = () => {
         }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {whyChooseUs.map((item, index) => <motion.div key={index} variants={itemVariants} className="flex gap-4 bg-white/80 backdrop-blur-sm p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="flex-shrink-0 mt-1">
-                  <motion.div initial={{
-                scale: 0.8
-              }} whileInView={{
-                scale: [0.8, 1.2, 1]
-              }} transition={{
-                duration: 0.5,
-                delay: index * 0.1
-              }} className="bg-brand-primary rounded-full p-1">
+                  <div className="bg-brand-primary rounded-full p-1">
                     <Check className="h-5 w-5 text-white" />
-                  </motion.div>
+                  </div>
                 </div>
                 <div>
                   <motion.h3 className="text-xl font-semibold text-brand-dark mb-2">
@@ -253,19 +235,11 @@ const Index = () => {
         }} viewport={{
           once: true
         }} className="mt-12 flex justify-center">
-            <div className="inline-block rounded-lg border border-gray-200 bg-white p-4 shadow-sm relative overflow-hidden group">
-              <motion.div animate={{
-              rotate: [0, 5, -5, 0],
-              scale: [1, 1.05, 1]
-            }} transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }} className="flex items-center gap-2 text-brand-primary relative z-10">
+            <div className="inline-block rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+              <div className="flex items-center gap-2 text-brand-primary">
                 <Check className="h-5 w-5" />
                 <span className="text-sm font-medium">Trusted by businesses across industries</span>
-              </motion.div>
-              <div className="absolute inset-0 bg-gradient-to-r from-brand-light/30 via-transparent to-brand-light/30 transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              </div>
             </div>
           </motion.div>
         </div>
@@ -312,21 +286,7 @@ const Index = () => {
           once: true,
           margin: "-100px"
         }} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => <motion.div key={index} variants={itemVariants} whileHover={{
-            scale: 1.03,
-            boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
-          }} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm relative" style={{
-            transformStyle: "preserve-3d",
-            perspective: "1000px"
-          }}>
-                <motion.div className="absolute -right-4 -top-4 bg-brand-accent/20 w-20 h-20 rounded-full blur-xl -z-10" animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 0.8, 0.5]
-            }} transition={{
-              duration: 3,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }} />
+            {caseStudies.map((study, index) => <motion.div key={index} variants={itemVariants} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden">
                 <motion.h3 className="text-xl font-semibold text-brand-dark mb-3">
                   {study.title}
                 </motion.h3>
@@ -358,16 +318,9 @@ const Index = () => {
             <div className="absolute -right-20 -top-20 w-40 h-40 bg-brand-accent/30 rounded-full blur-3xl" />
             <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-brand-primary/20 rounded-full blur-3xl" />
             <div className="flex gap-4 items-start relative z-10">
-              <motion.div animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.7, 1, 0.7]
-            }} transition={{
-              duration: 3,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }} className="text-4xl text-brand-primary">
+              <div className="text-4xl text-brand-primary">
                 "
-              </motion.div>
+              </div>
               <div>
                 <motion.p initial={{
                 opacity: 0
@@ -395,22 +348,8 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="section-padding bg-brand-primary text-white relative overflow-hidden">
-        <motion.div animate={{
-        y: [0, 15, 0],
-        opacity: [0.3, 0.6, 0.3]
-      }} transition={{
-        duration: 8,
-        repeat: Infinity,
-        repeatType: "reverse"
-      }} className="absolute top-0 right-0 w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl" />
-        <motion.div animate={{
-        y: [0, -15, 0],
-        opacity: [0.3, 0.5, 0.3]
-      }} transition={{
-        duration: 10,
-        repeat: Infinity,
-        repeatType: "reverse"
-      }} className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl opacity-40" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl opacity-40" />
         <div className="container mx-auto text-center max-w-3xl relative z-10">
           <motion.h2 initial={{
           opacity: 0,
@@ -448,8 +387,6 @@ const Index = () => {
           delay: 0.4
         }} viewport={{
           once: true
-        }} whileHover={{
-          scale: 1.05
         }}>
             <Button asChild className="bg-white text-brand-primary hover:bg-gray-100 px-8 py-6 text-lg relative overflow-hidden group">
               <Link to="/contact">
