@@ -69,6 +69,11 @@ const Footer = () => {
                   Custom Software & Automation
                 </Link>
               </li>
+              <li>
+                <Link to="/services#blockchain" className="text-gray-dark hover:text-brand-primary transition-colors">
+                  Blockchain Data Storage
+                </Link>
+              </li>
             </ul>
           </div>
           
