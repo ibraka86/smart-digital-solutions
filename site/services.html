@@ -1,346 +1,407 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services | Save Ideas Digital</title>
-  <meta name="description" content="SEO, Google Ads management, website development, custom software, automation and blockchain data storage — digital services from Save Ideas Digital.">
-  <meta name="author" content="Save Ideas Digital">
-  <meta name="theme-color" content="#f5f1e4">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Services | Save Ideas Digital</title>
+    <meta name="description" content="SEO, Google Ads management, website development, custom software, automation and blockchain data storage from Save Ideas Digital.">
+    <meta name="author" content="Save Ideas Digital">
+    <link rel="icon" href="images/og-image.png" type="image/png">
 
-  <meta property="og:title" content="Save Ideas Digital | SEO, Google Ads, Websites &amp; Software">
-  <meta property="og:description" content="Full-service digital solutions company helping businesses grow faster with SEO, Google Ads, websites and custom software.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@saveideasdigital">
-  <meta name="twitter:image" content="/assets/og-image.png">
+    <meta property="og:title" content="Services | Save Ideas Digital">
+    <meta property="og:description" content="Full-service digital solutions company helping businesses grow faster with SEO, Google Ads, websites and custom software.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@saveideasdigital">
+    <meta name="twitter:image" content="/images/og-image.png">
 
-  <link rel="icon" href="assets/og-image.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bold-redesign.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ===== Floating pill navigation ===== -->
-  <header class="site-header">
-    <nav class="nav" aria-label="Main">
-      <a href="index.html" class="brand" aria-label="Save Ideas Digital — home">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M17 5.5h-7a3.5 3.5 0 0 0 0 7h4a3.5 3.5 0 0 1 0 7H7" stroke="#2c2e2a" stroke-width="2.6" stroke-linecap="round"/></svg>
-        </span>
-        <span class="brand__name">Save Ideas <span>Digital</span></span>
-      </a>
-      <div class="nav__links">
-        <a href="index.html" data-nav="index">Home</a>
-        <a href="services.html" data-nav="services">Services</a>
-        <a href="about.html" data-nav="about">About</a>
-        <a href="contact.html" data-nav="contact">Contact</a>
-      </div>
-      <a href="contact.html" class="btn btn--ghost">Get a quote
-        <span class="btn__dot" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span></button>
-    </nav>
-    <div class="mobile-menu" id="mobile-menu" hidden>
-      <a href="index.html" data-nav="index">Home</a>
-      <a href="services.html" data-nav="services">Services</a>
-      <a href="about.html" data-nav="about">About</a>
-      <a href="contact.html" data-nav="contact">Contact</a>
-      <a href="contact.html" class="btn btn--coral">Get a quote
-        <span class="btn__dot" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="main-nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">
+                <img src="images/saveideasdigital.png" alt="Save Ideas Digital Logo">
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item" data-page="index">
+                    <span>Home</span>
+                </a>
+
+                <!-- Services Dropdown -->
+                <div class="dropdown">
+                    <div class="nav-item" style="cursor:pointer" data-page="services" tabindex="0">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="services.html#seo" class="dropdown-item">
+                            <span>SEO</span>
+                        </a>
+                        <a href="services.html#google-ads" class="dropdown-item">
+                            <span>Google Ads</span>
+                        </a>
+                        <a href="services.html#websites" class="dropdown-item">
+                            <span>Website Development</span>
+                        </a>
+                        <a href="services.html#software" class="dropdown-item">
+                            <span>Software &amp; Automation</span>
+                        </a>
+                        <a href="services.html#blockchain" class="dropdown-item">
+                            <span>Blockchain Data Storage</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="nav-item" data-page="about">
+                    <span>About Us</span>
+                </a>
+                <a href="contact.html" class="nav-item nav-item-btn">
+                    <span>Contact</span>
+                </a>
+            </nav>
+
+            <button class="mobile-menu-btn touch-target" onclick="toggleMobileMenu()" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav">
+        <div class="mobile-nav-content">
+            <button class="close-mobile-menu touch-target" onclick="toggleMobileMenu()" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="nav-logo mb-8">
+                <img src="images/saveideasdigital.png" alt="Save Ideas Digital Logo">
+            </div>
+
+            <nav class="mobile-nav-menu">
+                <a href="index.html" class="mobile-nav-item touch-target" data-page="index">
+                    <span>Home</span>
+                </a>
+
+                <!-- Services Mobile Dropdown -->
+                <div class="mobile-dropdown">
+                    <div class="mobile-nav-item touch-target" onclick="toggleMobileDropdown(this)" data-page="services">
+                        <span>Services</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                    <div class="mobile-dropdown-menu">
+                        <a href="services.html#seo" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>SEO</span>
+                        </a>
+                        <a href="services.html#google-ads" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Google Ads</span>
+                        </a>
+                        <a href="services.html#websites" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Website Development</span>
+                        </a>
+                        <a href="services.html#software" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Software &amp; Automation</span>
+                        </a>
+                        <a href="services.html#blockchain" class="mobile-dropdown-item touch-target" onclick="toggleMobileMenu()">
+                            <span>Blockchain Data Storage</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="mobile-nav-item touch-target" data-page="about">
+                    <span>About Us</span>
+                </a>
+                <a href="contact.html" class="mobile-nav-item touch-target" data-page="contact">
+                    <span>Contact</span>
+                </a>
+            </nav>
+        </div>
     </div>
-  </header>
 
-  <main id="main">
-    <section class="page-hero">
-      <div class="container page-hero--split">
-        <div>
-          <span class="eyebrow">Services</span>
-          <h1 class="display" style="font-size: var(--text-heading-lg)">Our digital <span class="hl">services.</span></h1>
+    <!-- Page Hero -->
+    <section class="page-hero section-gradient-light">
+        <div class="container mx-auto px-4">
+            <div class="hero-badge">
+                <div class="pulse-dot"></div>
+                <span>Services</span>
+            </div>
+            <h1>
+                <span class="underline-accent">
+                    Our Digital <span class="text-gradient">Services</span>
+                </span>
+            </h1>
+            <p class="text-gradient-subtle">Comprehensive digital solutions designed to help your business grow,
+                reach more customers, and operate more efficiently.</p>
         </div>
-        <div>
-          <p class="subheading">Comprehensive digital solutions designed to help your business grow, reach more customers, and operate more efficiently.</p>
-          <div class="chips">
-            <a class="chip" href="#seo">SEO</a>
-            <a class="chip" href="#google-ads">Google Ads</a>
-            <a class="chip" href="#websites">Websites</a>
-            <a class="chip" href="#software">Software</a>
-            <a class="chip" href="#blockchain">Blockchain</a>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section class="section--tight" style="padding-top:0">
-      <div class="container">
-
-        <article class="service-detail reveal" id="seo">
-          <div class="service-detail__art" style="--art-bg:#e8f6dc">
-            <span class="service-detail__index">01 / 05</span>
-            <svg viewBox="0 0 360 300" fill="none" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-              <rect x="40" y="60" width="220" height="170" rx="24" fill="#fff"/>
-              <path d="M40 96h220"/>
-              <circle cx="62" cy="78" r="6" fill="#ff705d"/><circle cx="82" cy="78" r="6" fill="#f5e211"/><circle cx="102" cy="78" r="6" fill="#8ed462"/>
-              <rect x="64" y="116" width="120" height="14" rx="7" fill="#8ed462"/>
-              <rect x="64" y="142" width="170" height="10" rx="5" fill="#e0dbce" stroke="none"/>
-              <rect x="64" y="162" width="150" height="10" rx="5" fill="#e0dbce" stroke="none"/>
-              <rect x="64" y="182" width="160" height="10" rx="5" fill="#e0dbce" stroke="none"/>
-              <g class="float">
-                <circle cx="252" cy="166" r="52" fill="#fff"/>
-                <circle cx="252" cy="166" r="36" stroke="#2ba0ff" stroke-width="10"/>
-                <path d="M290 204l34 34" stroke-width="14"/>
-                <text x="252" y="175" text-anchor="middle" fill="#2c2e2a" stroke="none" font-family="Inter, sans-serif" font-size="26" font-weight="500">#1</text>
-              </g>
-              <path d="M310 60l5 14 14 5-14 5-5 14-5-14-14-5 14-5z" fill="#f5e211"/>
-            </svg>
-          </div>
-          <div class="card service-detail__body">
-            <h2 class="heading">SEO Optimization</h2>
-            <p class="body-lg">Full on-site and off-site SEO services to grow organic traffic. We optimize your website content, structure, and backlink strategy to improve your search rankings and drive targeted organic traffic to your business.</p>
-            <h3 class="subheading" style="margin-top:28px; font-weight:500">What we offer:</h3>
-            <ul class="feature-list" style="margin-top:16px">
-              <li>Technical SEO audits &amp; optimization</li>
-              <li>Keyword research &amp; content strategy</li>
-              <li>On-page &amp; off-page optimization</li>
-              <li>Regular reporting &amp; analytics</li>
-              <li>Local SEO for better regional presence</li>
-            </ul>
-            <a href="contact.html" class="btn btn--coral">Get started<span class="btn__dot" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-          </div>
-        </article>
-
-        <article class="service-detail reveal" id="google-ads">
-          <div class="service-detail__art" style="--art-bg:#e1f0ff">
-            <span class="service-detail__index">02 / 05</span>
-            <svg viewBox="0 0 360 300" fill="none" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-              <circle cx="170" cy="160" r="110" fill="#fff"/>
-              <circle cx="170" cy="160" r="78" fill="#2ba0ff"/>
-              <circle cx="170" cy="160" r="48" fill="#fff"/>
-              <circle cx="170" cy="160" r="18" fill="#ff705d"/>
-              <g class="float">
-                <path d="M174 156l120-92"/>
-                <path d="M294 64l6-30 22 22-28 8z" fill="#f5e211"/>
-                <path d="M294 64l-4 30 30-8" fill="#8ed462"/>
-              </g>
-              <rect x="30" y="30" width="96" height="40" rx="20" fill="#fff"/>
-              <text x="78" y="57" text-anchor="middle" fill="#2c2e2a" stroke="none" font-family="Inter, sans-serif" font-size="18" font-weight="500">ROI ↑</text>
-            </svg>
-          </div>
-          <div class="card service-detail__body">
-            <h2 class="heading">Google Ads Management</h2>
-            <p class="body-lg">High-ROI Google Ads campaigns tailored to your business goals. Our Google Ads experts create and manage targeted campaigns designed to maximize your return on investment while minimizing unnecessary ad spend.</p>
-            <h3 class="subheading" style="margin-top:28px; font-weight:500">What we offer:</h3>
-            <ul class="feature-list" style="margin-top:16px; --dot: var(--color-sky-pop)">
-              <li>Strategic campaign setup &amp; optimization</li>
-              <li>Custom audience targeting</li>
-              <li>Ad copy &amp; creative development</li>
-              <li>Conversion tracking &amp; analysis</li>
-              <li>Budget management &amp; ROI maximization</li>
-            </ul>
-            <a href="contact.html" class="btn btn--coral">Get started<span class="btn__dot" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-          </div>
-        </article>
-
-        <article class="service-detail reveal" id="websites">
-          <div class="service-detail__art" style="--art-bg:#ffe6e2">
-            <span class="service-detail__index">03 / 05</span>
-            <svg viewBox="0 0 360 300" fill="none" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-              <rect x="30" y="50" width="230" height="170" rx="24" fill="#fff"/>
-              <path d="M30 86h230"/>
-              <circle cx="52" cy="68" r="6" fill="#ff705d"/><circle cx="72" cy="68" r="6" fill="#f5e211"/><circle cx="92" cy="68" r="6" fill="#8ed462"/>
-              <rect x="52" y="104" width="100" height="64" rx="14" fill="#ff705d"/>
-              <rect x="166" y="104" width="72" height="12" rx="6" fill="#2c2e2a"/>
-              <rect x="166" y="126" width="60" height="10" rx="5" fill="#e0dbce" stroke="none"/>
-              <rect x="166" y="144" width="66" height="10" rx="5" fill="#e0dbce" stroke="none"/>
-              <rect x="52" y="182" width="80" height="22" rx="11" fill="#8ed462"/>
-              <g class="float float--delay">
-                <rect x="240" y="120" width="86" height="150" rx="20" fill="#fff"/>
-                <rect x="254" y="144" width="58" height="40" rx="10" fill="#ff705d"/>
-                <rect x="254" y="194" width="58" height="8" rx="4" fill="#e0dbce" stroke="none"/>
-                <rect x="254" y="210" width="40" height="8" rx="4" fill="#e0dbce" stroke="none"/>
-                <rect x="270" y="130" width="26" height="4" rx="2" fill="#2c2e2a" stroke="none"/>
-                <rect x="254" y="232" width="58" height="18" rx="9" fill="#8ed462"/>
-              </g>
-            </svg>
-          </div>
-          <div class="card service-detail__body">
-            <h2 class="heading">Website Development</h2>
-            <p class="body-lg">Custom, mobile-responsive websites designed to convert. We create beautiful, functional websites that not only look great on all devices but are optimized for conversions and user experience.</p>
-            <h3 class="subheading" style="margin-top:28px; font-weight:500">What we offer:</h3>
-            <ul class="feature-list" style="margin-top:16px; --dot: var(--color-coral-pop)">
-              <li>Custom design &amp; development</li>
-              <li>Mobile-first responsive design</li>
-              <li>SEO-friendly architecture</li>
-              <li>Performance optimization</li>
-              <li>Content management systems</li>
-            </ul>
-            <a href="contact.html" class="btn btn--coral">Get started<span class="btn__dot" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-          </div>
-        </article>
-
-        <article class="service-detail reveal" id="software">
-          <div class="service-detail__art" style="--art-bg:#fdf8c4">
-            <span class="service-detail__index">04 / 05</span>
-            <svg viewBox="0 0 360 300" fill="none" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-              <g class="spin-slow">
-                <path d="M130 60l12 0 4 22 16 7 18-13 9 9-13 18 7 16 22 4v12l-22 4-7 16 13 18-9 9-18-13-16 7-4 22h-12l-4-22-16-7-18 13-9-9 13-18-7-16-22-4v-12l22-4 7-16-13-18 9-9 18 13 16-7z" fill="#8ed462"/>
-                <circle cx="136" cy="134" r="22" fill="#fff"/>
-              </g>
-              <g class="spin-slow" style="animation-direction: reverse">
-                <path d="M244 150l10 0 3 16 12 5 13-9 7 7-9 13 5 12 16 3v10l-16 3-5 12 9 13-7 7-13-9-12 5-3 16h-10l-3-16-12-5-13 9-7-7 9-13-5-12-16-3v-10l16-3 5-12-9-13 7-7 13 9 12-5z" fill="#2ba0ff"/>
-                <circle cx="249" cy="205" r="16" fill="#fff"/>
-              </g>
-              <rect x="40" y="226" width="130" height="44" rx="22" fill="#fff"/>
-              <path d="M66 248l-8-6 8-6M84 236l8 6-8 6M76 232l-6 20" stroke-width="2.5"/>
-              <rect x="100" y="243" width="50" height="8" rx="4" fill="#f5e211"/>
-            </svg>
-          </div>
-          <div class="card service-detail__body">
-            <h2 class="heading">Custom Software &amp; Automation</h2>
-            <p class="body-lg">Tailored software solutions and automations to scale business operations. Our development team builds custom software applications that streamline your business processes, reduce manual work, and increase efficiency.</p>
-            <h3 class="subheading" style="margin-top:28px; font-weight:500">What we offer:</h3>
-            <ul class="feature-list" style="margin-top:16px; --dot: var(--color-sunshine-pop)">
-              <li>Business process automation</li>
-              <li>Custom software development</li>
-              <li>Integration with existing systems</li>
-              <li>Data management solutions</li>
-              <li>Workflow optimization tools</li>
-            </ul>
-            <a href="contact.html" class="btn btn--coral">Get started<span class="btn__dot" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-          </div>
-        </article>
-
-        <article class="service-detail reveal" id="blockchain">
-          <div class="service-detail__art" style="--art-bg:#ece6ff">
-            <span class="service-detail__index">05 / 05</span>
-            <svg viewBox="0 0 360 300" fill="none" stroke="#2c2e2a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-              <path d="M110 120l70 40M180 160l70-40M180 160v70" stroke-dasharray="3 10"/>
-              <g class="float">
-                <path d="M110 60l44 24v48l-44 24-44-24V84z" fill="#9b7bff"/><path d="M66 84l44 24 44-24M110 108v48"/>
-              </g>
-              <g class="float float--delay">
-                <path d="M250 60l44 24v48l-44 24-44-24V84z" fill="#fff"/><path d="M206 84l44 24 44-24M250 108v48"/>
-              </g>
-              <g class="float float--slow">
-                <path d="M180 160l44 24v48l-44 24-44-24v-48z" fill="#8ed462"/><path d="M136 184l44 24 44-24M180 208v48"/>
-              </g>
-              <rect x="150" y="24" width="60" height="44" rx="10" fill="#f5e211"/>
-              <path d="M164 24v-8a16 16 0 0 1 32 0v8"/>
-              <circle cx="180" cy="46" r="5" fill="#2c2e2a"/>
-            </svg>
-          </div>
-          <div class="card service-detail__body">
-            <h2 class="heading">Blockchain Data Storage</h2>
-            <p class="body-lg">Secure, transparent, and decentralized data storage solutions using blockchain technology. We implement cutting-edge blockchain systems that ensure data integrity, enhance security, and provide immutable record-keeping for your business.</p>
-            <h3 class="subheading" style="margin-top:28px; font-weight:500">What we offer:</h3>
-            <ul class="feature-list" style="margin-top:16px; --dot: var(--color-plum-pop)">
-              <li>Decentralized storage architecture</li>
-              <li>Immutable data records &amp; timestamping</li>
-              <li>Smart contract implementation</li>
-              <li>Enhanced data security &amp; integrity</li>
-              <li>Transparent audit trails &amp; compliance</li>
-            </ul>
-            <a href="contact.html" class="btn btn--coral">Get started<span class="btn__dot" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-          </div>
-        </article>
-      </div>
+    <!-- Services Detail -->
+    <section class="section-padding">
+        <div class="container mx-auto px-4 space-y-12">
+            <div id="seo" class="service-card service-detail-card animate-on-scroll" style="scroll-margin-top: 120px; cursor: default !important;">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div>
+                        <div class="icon-wrapper-colored" style="background: var(--green-primary);">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h2>SEO Optimization</h2>
+                        <p>Full on-site and off-site SEO services to grow organic traffic. We optimize your website content, structure, and backlink strategy to improve your search rankings and drive targeted organic traffic to your business.</p>
+                        <a href="contact.html" class="btn-primary touch-target">
+                            <span>Get Started</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        </a>
+                    </div>
+                    <div>
+                        <h4>What we offer:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i>Technical SEO audits &amp; optimization</li>
+                            <li><i class="fas fa-check-circle"></i>Keyword research &amp; content strategy</li>
+                            <li><i class="fas fa-check-circle"></i>On-page &amp; off-page optimization</li>
+                            <li><i class="fas fa-check-circle"></i>Regular reporting &amp; analytics</li>
+                            <li><i class="fas fa-check-circle"></i>Local SEO for better regional presence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="google-ads" class="service-card service-detail-card animate-on-scroll" style="scroll-margin-top: 120px; cursor: default !important;">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div>
+                        <div class="icon-wrapper-colored" style="background: var(--accent-electric);">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h2>Google Ads Management</h2>
+                        <p>High-ROI Google Ads campaigns tailored to your business goals. Our Google Ads experts create and manage targeted campaigns designed to maximize your return on investment while minimizing unnecessary ad spend.</p>
+                        <a href="contact.html" class="btn-primary touch-target">
+                            <span>Get Started</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        </a>
+                    </div>
+                    <div>
+                        <h4>What we offer:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i>Strategic campaign setup &amp; optimization</li>
+                            <li><i class="fas fa-check-circle"></i>Custom audience targeting</li>
+                            <li><i class="fas fa-check-circle"></i>Ad copy &amp; creative development</li>
+                            <li><i class="fas fa-check-circle"></i>Conversion tracking &amp; analysis</li>
+                            <li><i class="fas fa-check-circle"></i>Budget management &amp; ROI maximization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="websites" class="service-card service-detail-card animate-on-scroll" style="scroll-margin-top: 120px; cursor: default !important;">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div>
+                        <div class="icon-wrapper-colored" style="background: var(--accent-coral);">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h2>Website Development</h2>
+                        <p>Custom, mobile-responsive websites designed to convert. We create beautiful, functional websites that not only look great on all devices but are optimized for conversions and user experience.</p>
+                        <a href="contact.html" class="btn-primary touch-target">
+                            <span>Get Started</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        </a>
+                    </div>
+                    <div>
+                        <h4>What we offer:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i>Custom design &amp; development</li>
+                            <li><i class="fas fa-check-circle"></i>Mobile-first responsive design</li>
+                            <li><i class="fas fa-check-circle"></i>SEO-friendly architecture</li>
+                            <li><i class="fas fa-check-circle"></i>Performance optimization</li>
+                            <li><i class="fas fa-check-circle"></i>Content management systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="software" class="service-card service-detail-card animate-on-scroll" style="scroll-margin-top: 120px; cursor: default !important;">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div>
+                        <div class="icon-wrapper-colored" style="background: var(--accent-purple);">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h2>Custom Software &amp; Automation</h2>
+                        <p>Tailored software solutions and automations to scale business operations. Our development team builds custom software applications that streamline your business processes, reduce manual work, and increase efficiency.</p>
+                        <a href="contact.html" class="btn-primary touch-target">
+                            <span>Get Started</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        </a>
+                    </div>
+                    <div>
+                        <h4>What we offer:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i>Business process automation</li>
+                            <li><i class="fas fa-check-circle"></i>Custom software development</li>
+                            <li><i class="fas fa-check-circle"></i>Integration with existing systems</li>
+                            <li><i class="fas fa-check-circle"></i>Data management solutions</li>
+                            <li><i class="fas fa-check-circle"></i>Workflow optimization tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="blockchain" class="service-card service-detail-card animate-on-scroll" style="scroll-margin-top: 120px; cursor: default !important;">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div>
+                        <div class="icon-wrapper-colored" style="background: var(--green-primary);">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <h2>Blockchain Data Storage</h2>
+                        <p>Secure, transparent, and decentralized data storage solutions using blockchain technology. We implement cutting-edge blockchain systems that ensure data integrity, enhance security, and provide immutable record-keeping for your business.</p>
+                        <a href="contact.html" class="btn-primary touch-target">
+                            <span>Get Started</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        </a>
+                    </div>
+                    <div>
+                        <h4>What we offer:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i>Decentralized storage architecture</li>
+                            <li><i class="fas fa-check-circle"></i>Immutable data records &amp; timestamping</li>
+                            <li><i class="fas fa-check-circle"></i>Smart contract implementation</li>
+                            <li><i class="fas fa-check-circle"></i>Enhanced data security &amp; integrity</li>
+                            <li><i class="fas fa-check-circle"></i>Transparent audit trails &amp; compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="section container">
-      <div class="cta reveal">
-        <span class="cta__blob cta__blob--1 float" aria-hidden="true"></span>
-        <span class="cta__blob cta__blob--2 float float--delay" aria-hidden="true"></span>
-        <span class="cta__blob cta__blob--3" aria-hidden="true"></span>
-        <span class="cta__blob cta__blob--4 float" aria-hidden="true"></span>
-        <h2 class="heading-lg">Need a custom solution?</h2>
-        <p class="body-lg muted">We can create tailored digital strategies that combine our services for maximum impact. Let's discuss your specific business needs and goals.</p>
-        <a href="contact.html" class="btn btn--coral btn--lg">Contact our team<span class="btn__dot" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-      </div>
+    <!-- CTA Section -->
+    <section class="section-padding cta-section">
+        <div class="container mx-auto px-4">
+            <div class="cta-container">
+                <div class="cta-badge">
+                    <div class="pulse-dot"></div>
+                    <span>Let's Work Together</span>
+                </div>
+
+                <h2 class="cta-title">
+                    <span class="underline-accent">
+                        Need a Custom <span class="text-gradient">Solution?</span>
+                    </span>
+                </h2>
+
+                <p class="cta-description text-gradient-subtle">
+                    We can create tailored digital strategies that combine our services for maximum impact. Let's discuss your specific business needs and goals.
+                </p>
+
+                <a href="contact.html" class="btn-primary btn-large">
+                    <span>Contact Our Team</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <!-- ===== Footer ===== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <p class="footer-big">Smart ideas, real growth.</p>
-        <a href="contact.html" class="btn btn--ink btn--lg">Get a quote<span class="btn__dot" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none"><path d="M4.5 11.5l7-7M6 4.5h5.5V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-      </div>
-      <div class="footer-cols">
-        <div>
-          <a href="index.html" class="brand">
-            <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M17 5.5h-7a3.5 3.5 0 0 0 0 7h4a3.5 3.5 0 0 1 0 7H7" stroke="#2c2e2a" stroke-width="2.6" stroke-linecap="round"/></svg></span>
-            <span class="brand__name">Save Ideas Digital</span>
-          </a>
-          <p>Full-service digital solutions company specializing in SEO, Google Ads, website development, software creation, and automation systems.</p>
-        </div>
-        <div>
-          <h4>Quick links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Services</h4>
-          <ul>
-            <li><a href="services.html#seo">SEO Optimization</a></li>
-            <li><a href="services.html#google-ads">Google Ads Management</a></li>
-            <li><a href="services.html#websites">Website Development</a></li>
-            <li><a href="services.html#software">Custom Software &amp; Automation</a></li>
-            <li><a href="services.html#blockchain">Blockchain Data Storage</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact us</h4>
-          <ul>
-            <li><a href="mailto:info@saveideasdigital.com">info@saveideasdigital.com</a></li>
-            <li><a href="tel:+61435877989">(+61) 435 877 989</a></li>
-            <li><a href="https://saveideasdigital.com">saveideasdigital.com</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span data-year>2025</span> Save Ideas Digital. All rights reserved.</span>
-        <button class="to-top" type="button">Back to top ↑</button>
-      </div>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer-brutalist">
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <a href="index.html" class="footer-logo inline-block">
+                        <img src="images/saveideasdigital.png" alt="Save Ideas Digital Logo">
+                    </a>
+                    <p class="footer-text">Full-service digital solutions company specializing in SEO, Google Ads,
+                        website development, software creation, and automation systems.</p>
+                </div>
 
-  <script src="js/main.js"></script>
-  <script
-    src="https://preview--trust-boost-widgets.lovable.app/widget.js"
-    data-site-id="14623d0e-f2e2-466c-b0d6-7238b354b3c2"
-    data-color="#8ed462"
-    data-greeting="Hello! 👋 How can I help you today?"
-    data-theme="light"
-    data-size="medium"
-    data-logo-url="https://blog.thebreadmap.com/wp-content/smush-webp/2025/06/ChatGPT-Image-Jun-2-2025-03_54_25-PM-800x800.png.webp"
-    data-bot-name="AI Assistant"
-    data-quick-replies-count="4"
-    data-quick-reply-1="🔨 I need help building something"
-    data-quick-reply-1-mode="chatbot"
-    data-quick-reply-2="🤔 I have questions"
-    data-quick-reply-2-mode="chatbot"
-    data-quick-reply-3="📖 Tell me about your services"
-    data-quick-reply-3-mode="chatbot"
-    data-quick-reply-4="👋 Just browsing"
-    data-quick-reply-4-mode="chatbot"
-    data-enable-homepage="true"
-    data-home-title="How can we help you today?"
-    data-home-subtitle="Let me know if you have any questions!"
-    data-home-tab-text="Save Ideas"
-    data-chat-tab-text="Contact"
-    data-home-link1-text="⚡ Start free trial"
-    data-home-link1-url="https://save-ideas.com/"
-    defer
-  ></script>
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#seo">SEO Optimization</a></li>
+                        <li><a href="services.html#google-ads">Google Ads Management</a></li>
+                        <li><a href="services.html#websites">Website Development</a></li>
+                        <li><a href="services.html#software">Custom Software &amp; Automation</a></li>
+                        <li><a href="services.html#blockchain">Blockchain Data Storage</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@saveideasdigital.com">info@saveideasdigital.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+61435877989">(+61) 435 877 989</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <a href="https://saveideasdigital.com">saveideasdigital.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span data-year>2025</span> Save Ideas Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script
+      src="https://preview--trust-boost-widgets.lovable.app/widget.js"
+      data-site-id="14623d0e-f2e2-466c-b0d6-7238b354b3c2"
+      data-color="#10B981"
+      data-greeting="Hello! 👋 How can I help you today?"
+      data-theme="light"
+      data-size="medium"
+      data-logo-url="https://blog.thebreadmap.com/wp-content/smush-webp/2025/06/ChatGPT-Image-Jun-2-2025-03_54_25-PM-800x800.png.webp"
+      data-bot-name="AI Assistant"
+      data-quick-replies-count="4"
+      data-quick-reply-1="🔨 I need help building something"
+      data-quick-reply-1-mode="chatbot"
+      data-quick-reply-2="🤔 I have questions"
+      data-quick-reply-2-mode="chatbot"
+      data-quick-reply-3="📖 Tell me about your services"
+      data-quick-reply-3-mode="chatbot"
+      data-quick-reply-4="👋 Just browsing"
+      data-quick-reply-4-mode="chatbot"
+      data-enable-homepage="true"
+      data-home-title="How can we help you today?"
+      data-home-subtitle="Let me know if you have any questions!"
+      data-home-tab-text="Save Ideas"
+      data-chat-tab-text="Contact"
+      data-home-link1-text="⚡ Start free trial"
+      data-home-link1-url="https://save-ideas.com/"
+      defer
+    ></script>
 </body>
+
 </html>
